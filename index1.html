@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+* {
+  box-sizing: border-box ;
+}
+ul.menuatas {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #000000;
+}
+
+ul.menuatas li {float: left;}
+
+ul.menuatas li a {
+  display: inline-block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+ul.menuatas li a:hover {background-color: #0000FF;}
+ul.menuatas li.icon {display: none;}
+
+
+@media screen and (max-width:680px) {
+  ul.menuatas li:not(:first-child) {display: none;}
+  ul.menuatas li.icon {
+    float: right;
+    display: inline-block;
+  }
+}
+
+
+
+@media screen and (max-width:680px) {
+  ul.menuatas.responsive {position: relative;}
+  ul.menuatas.responsive li.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  ul.menuatas.responsive li {
+    float: none;
+    display: inline;
+  }
+  ul.menuatas.responsive li a {
+    display: block;
+    text-align: left;
+  }
+}
+.article {
+  font-family: Verdana, sans-serif;
+  float: left;
+  padding: 16px;
+  width: 100%;
+  background-color: #E0FFFF;
+  color:black;
+  /* only for demonstration, should be removed */
+}
+
+@media only screen and (max-width: 620px) {
+  /* For mobile phones: */
+  .menu, .main, .right,.article {
+    width: 100%;
+  }
+}
+</style>
+</head>
+<body style="font-family:Verdana;color:#aaaaaa;">
+
+<div style="background-color:#191970;padding:15px;text-align:center;">
+  <h1>PEMPROGRAMAN WEB</h1>
+</div>
+
+<ul class="menuatas" id="myTopnav">
+  <li><a class="active" href="index1.html">Home</a></li>
+  <li><a href="daftar.html">Daftar</a></li>
+  <li><a href="presensi.html">Presensi</a></li>
+  <li class="icon">
+    <a href="javascript:void(0);" style="font-size:15px;" onclick="myFunction
+
+()">☰</a>
+  </li>
+</ul>
+
+<script>
+function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "menuatas") {
+        x.className += " responsive";
+    } else {
+        x.className = "menuatas";
+    }
+}
+</script>
+
+
+<div stlye="article">
+<div class="article">
+  <img src="aa.jpg" style="max-width:100%;height:auto;">
+ <p>PENGERTIAN PEMROGRAMAN WEB
+Pemrograman web diambil dari 2 suku kata yaitu pemrograman dan web. Pemrograman yang dalam bahasa English adalah programming dan diartikan proses, cara, perbuatan program.
+
+Definisi Web : jaringan komputer yang terdiri dari kumpulan situs internet yang menawarkan teks dan grafik dan suara dan sumber daya animasi melalui protokol transfer hypertext.
+
+Orang banyak mengenal web dengan istilah WWW (world wide web), World Wide Web adalah layanan internet yang paling populer saat ini internet mulai dikenal dan digunakan secara luas setelah adanya layanan WWW . WWW adalah halaman-halaman website yang dapat saling terkoneksi satu dengan lainnya (hyperlink) yang membentuk samudra belantara informasi . WWW berjalan dengan protokol HyperText Transfer Protokol (HTTP). Halaman Web merupakan file teks murni (plain text) yang berisi sintaks-sintaks HTML yang dapat dibuka/ dilihat/ diterjemahkan dengan Internet Browser . Sintaks HTML mampu memuat konten text, gambar, audio, video dan animasi. Kini internet identik dengan web, karena kepopuleran web sebagai standar interface pada lanyanan-layanan yang ada di internet, dari awalnya sebagai penyedia informasi, ini digunakan juga untuk komunikasi dari email sampai dengan chatting, sampai dengan melakukan transaksi binsin (commerce) (Betha Sidik,Ir, Pemrograman web dengan HTML, Informatika Bandung, 2005) Banyak keuntungan yang diberikan oleh Aplikasi berbasis Web dari pada aplikasi berbasis destop, sehingga aplikasi berbasis web telah diadopsi oleh perusahaan sebagai bagian dari strategi teknologi informasinya, karena beberapa alasan :
+Akses informasi mudah,
+Baris isi
+Setup server lebih mudah
+Baris isi
+Informasi mudah didistribusikan
+Baris isi
+Bebas platform, informasi dapat di sajikan oleh browser web pada sistem operasi mana saja karena adanya standar dokumen berbagai tipe data dapat disajikan
+Baris isi
+HTTP
+HTTP (HyperTextTransfer Protocol) adalah protokol yang dipergunakan untuk mentransfer dokumen dalam World Wide Web(WWW). Protokol ini adalah protokol ringan, tidak berstatus dan generik yang dapat dipergunakan berbagai macam tipe dokumen. Pengembangan HTTP dikoordinasi oleh Konsorsium World Wide Web(W3C) dan grup bekerja Internet Engineering Task Force(IETF), bekerja dalam publikasi satu seri RFC, yang paling terkenal RFC 2616, yang menjelaskan HTTP/1,1, versti HTTP yang digunakan umum sekarang ini. HTTP adalah sebuah protokol meminta/menjawab antara clientdan server. Sebuh client HTTP seperti web browser, biasanya memulai permintaan dengan membuat hubungan TCP/IPke porttertentu di tuan rumah yang jauh (biasanya port 80). Sebuah server HTTP yang mendengarkan diport tersebut menunggu client mengirim kode permintaan (request), seperti “GET / HTTP/1.1” (yang akan meminta halaman yang sudah ditentukan), diikuti dengan pesan MIMEyang memiliki beberapa informasi kode kepala yang menjelaskan aspek dari permintaan tersebut, diikut dengan badan dari data tertentu. Beberapa kepala (header) juga bebas ditulis atau tidak, sementara lainnya (seperti tuan rumah) diperlukan oleh protokol HTTP/1,1. Begitu menerima kode permintaan (dan pesan, bila ada), server mengirim kembali kode jawaban, seperti “200 OK”, dan sebuah pesan yang diminta, atau sebuah pesan error atau pesan lainnya.
+Sejarah Protokol HTTP pertama kali dipergunakan dalam WWW pada tahun 1990. Pada saat tersebut yang dipakai adalah protokol HTTP versi 0.9. Versi 0.9 ini adalah protokol transfer dokumen secara mentah, maksudnya adalah data dokumen dikirim sesuai dengan isi dari dokumen tersebut tanpa memandang tipe dari dokumen. Kemudian pada tahun 1996 protokol HTTP diperbaiki menjadi HTTP versi 1.0. Perubahan ini untuk mengakomodasi tipe-tipe dokumen yang hendak dikirim beserta enkoding yang dipergunakan dalam pengiriman data dokumen. Sesuai dengan perkembangan infrastruktur internet maka pada tahun 1999 dikeluarkan HTTP versi 1.1 untuk mengakomodasi proxy, cache dan koneksi yang persisten.</p>
+</div>
+
+
+<div style="background-color:#2F4F4F;text-align:center;padding:10px;color:white;">CREATOR BY ALFAN</div>
+
+</body>
+</html>
+

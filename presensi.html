@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+* {
+  box-sizing: border-box ;
+}
+ul.menuatas {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #000000;
+}
+
+ul.menuatas li {float: left;}
+
+ul.menuatas li a {
+  display: inline-block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+ul.menuatas li a:hover {background-color: #0000FF;}
+ul.menuatas li.icon {display: none;}
+
+
+@media screen and (max-width:680px) {
+  ul.menuatas li:not(:first-child) {display: none;}
+  ul.menuatas li.icon {
+    float: right;
+    display: inline-block;
+  }
+}
+
+
+
+@media screen and (max-width:680px) {
+  ul.menuatas.responsive {position: relative;}
+  ul.menuatas.responsive li.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  ul.menuatas.responsive li {
+    float: none;
+    display: inline;
+  }
+  ul.menuatas.responsive li a {
+    display: block;
+    text-align: left;
+  }
+}
+.article {
+  font-family: Verdana, sans-serif;
+  float: left;
+  padding: 16px;
+  width: 100%;
+  background-color: #E0FFFF;
+  color:black;
+  /* only for demonstration, should be removed */
+}
+
+@media only screen and (max-width: 620px) {
+  /* For mobile phones: */
+  .menu, .main, .right,.article {
+    width: 100%;
+  }
+}
+</style>
+</head>
+<body style="font-family:Verdana;color:#aaaaaa;">
+
+<div style="background-color:#191970;padding:15px;text-align:center;">
+  <h1>PEMPROGRAMAN WEB</h1>
+</div>
+
+<ul class="menuatas" id="myTopnav">
+  <li><a href="index1.html">Home</a></li>
+  <li class="icon">
+    <a href="javascript:void(0);" style="font-size:15px;" onclick="myFunction
+
+()">☰</a>
+  </li>
+</ul>
+
+<script>
+function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "menuatas") {
+        x.className += " responsive";
+    } else {
+        x.className = "menuatas";
+    }
+}
+</script>
+
+
+<div stlye="article">
+<div class="article">
+ <h2>Tabel Data Kelas</h2>
+ <table border="1">
+  <tr bgcolor="#00FFFF">
+    <th rowspan="2">NO</th>
+    <th  rowspan="2" width="300">NAMA</th>
+    <th rowspan="2" width="200">JENIS KELAMIN</th>
+        <th rowspan="2" width="120">KELAS</th>
+        <th colspan="4" width="180">SEPTEMBER</th>
+       <tr bgcolor="#00FFFF">
+        <th>1</th>
+        <th>2</th>
+        <th>3</th>
+        <th>4</th>
+    </tr>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>ADITYA NUR ANANDA</td>
+    <td>LAKI-LAKI</td>
+    <td>XII RPL 1</td>
+    <td>H</td>
+    <td>H</td>
+    <td>H</td>
+    <td>H</td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>ALFAN LUTHFI BACHTIAR</td>
+    <td>LAKI-LAKI</td>
+    <td>XII RPL 1</td>
+    <td>H</td>
+    <td>A</td>
+    <td>H</td>
+    <td>H</td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>ANAS ISTIGFAR</td>
+    <td>LAKI-LAKI</td>
+    <td>XII RPL 1</td>
+    <td>H</td>
+    <td>S</td>
+    <td>I</td>
+    <td>H</td>
+  </tr>
+  <tr>
+    <td>4</td>
+    <td>BOBBY JOHAN NIKOLAS</td>
+    <td>LAKI-LAKI</td>
+    <td>XII RPL 1</td>
+    <td>A</td>
+    <td>S</td>
+    <td>I</td>
+    <td>H</td>
+  </tr>
+  <tr>
+    <td>5</td>
+    <td>CALVIN PUTRA PRASEVA</td>
+    <td>LAKI-LAKI</td>
+    <td>XII RPL 1</td>
+    <td>A</td>
+    <td>A</td>
+    <td>A</td>
+    <td>H</td>
+  </tr>
+ </table>
+</div>
+
+
+<div style="background-color:#2F4F4F;text-align:center;padding:10px;color:white;">CREATOR BY ALFAN</div>
+
+</body>
+</html>
+

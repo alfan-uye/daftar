@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+* {
+  box-sizing: border-box ;
+}
+ul.menuatas {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #000000;
+}
+
+ul.menuatas li {float: left;}
+
+ul.menuatas li a {
+  display: inline-block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+ul.menuatas li a:hover {background-color: #0000FF;}
+ul.menuatas li.icon {display: none;}
+
+
+@media screen and (max-width:680px) {
+  ul.menuatas li:not(:first-child) {display: none;}
+  ul.menuatas li.icon {
+    float: right;
+    display: inline-block;
+  }
+}
+
+
+
+@media screen and (max-width:680px) {
+  ul.menuatas.responsive {position: relative;}
+  ul.menuatas.responsive li.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  ul.menuatas.responsive li {
+    float: none;
+    display: inline;
+  }
+  ul.menuatas.responsive li a {
+    display: block;
+    text-align: left;
+  }
+}
+.article {
+  font-family: Verdana, sans-serif;
+  float: left;
+  padding: 16px;
+  width: 100%;
+  background-color: #E0FFFF;
+  color:black;
+  /* only for demonstration, should be removed */
+}
+
+@media only screen and (max-width: 620px) {
+  /* For mobile phones: */
+  .menu, .main, .right,.article {
+    width: 100%;
+  }
+}
+</style>
+</head>
+<body style="font-family:Verdana;color:#aaaaaa;">
+
+<div style="background-color:#191970;padding:15px;text-align:center;">
+  <h1>PEMPROGRAMAN WEB</h1>
+</div>
+
+<ul class="menuatas" id="myTopnav">
+  <li><a href="index1.html">Home</a></li>
+  <li class="icon">
+    <a href="javascript:void(0);" style="font-size:15px;" onclick="myFunction
+
+()">☰</a>
+  </li>
+</ul>
+
+<script>
+function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "menuatas") {
+        x.className += " responsive";
+    } else {
+        x.className = "menuatas";
+    }
+}
+</script>
+
+
+<div stlye="article">
+<div class="article">
+<h1>FORM DAFTAR</h1>
+
+  <form>
+  <label>Nama Depan</label>
+  <input type="text">
+  <label>Nama Belakang</label>
+  <input type="text"><br><br>
+  <label>Tempat Lahir</label>
+  <input list="tempat lahir">
+  <datalist id="tempat lahir">
+    <option value="Kab Madiun">
+    <option value="Kab Ngawi">
+    <option value="Kab Magetan">
+    <option value="Kab ponorogo">
+    <option value="Lainnya">
+  </datalist><br><br>
+  <label>Tanggal Lahir</label>
+  <input type="date"> <br> <br>
+
+  <label>Jenis kelamin</label>
+  <input type="radio" id="laki-laki">
+  <label>laki-laki</label>
+  <input type="radio" id="perempuan">
+  <label>perempuan</label><br><br>
+
+  <label>Hobby</label>
+  <input type="checkbox" id="olahraga" value="olahraga">
+  <label>olahraga</label>
+  <input type="checkbox" id="mebaca" value="membaca">
+  <label>membaca</label>
+  <input type="checkbox" id="travelling" value="travelling">
+  <label>travelling</label><br><br>
+  <label>Alamat</label>
+  <textarea rows="3"></textarea><br><br>
+
+  <input type="Submit" value="Daftar">
+  <input type="Reset">
+  </form>
+</div>
+
+
+<div style="background-color:#2F4F4F;text-align:center;padding:10px;color:white;">CREATOR BY ALFAN</div>
+
+</body>
+</html>
+
